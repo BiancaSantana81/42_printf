@@ -6,7 +6,7 @@
 /*   By: bsantana <bsantana@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 14:59:49 by bsantana          #+#    #+#             */
-/*   Updated: 2023/12/13 15:39:53 by bsantana         ###   ########.fr       */
+/*   Updated: 2023/12/13 18:12:15 by bsantana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	main(void)
 	ft_printf("%i\n", 42);
 
 	printf("Função original: \n");
-	printf("%x\n", -10);
+	printf("%x\n", -42);
 	ft_printf("Meu hexadecimal minúsculo: \n");
-	ft_printf("%x\n", -10);
+	ft_printf("%x\n", -42);
 
 	printf("Função original: \n");
 	printf("%X\n", -10);
@@ -52,9 +52,9 @@ int	main(void)
 	ft_printf("%u\n", -1);
 
 	printf("Função original: \n");
-	printf("%p\n", "Você imprime em hexadecimal?");
+	printf("%p\n", -42);
 	ft_printf("Meu ponteiro: \n");
-	ft_printf("%p\n", "Você imprime em hexadecimal?");
+	ft_printf("%p\n", -42);
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bsantana <bsantana@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 11:27:08 by bsantana          #+#    #+#             */
-/*   Updated: 2023/12/13 15:26:50 by bsantana         ###   ########.fr       */
+/*   Updated: 2023/12/13 18:53:42 by bsantana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_flags(char flag, va_list args)
 		return (ft_putnbase(va_arg(args, unsigned int), HEXA_LOWER_BASE));
 	if (flag == 'X')
 		return (ft_putnbase(va_arg(args, unsigned int), HEXA_UPPER_BASE));
+	if (flag == 'u')
+		return (ft_putnbase(va_arg(args, unsigned int), DECIMAL_BASE));
 	if (flag == '%')
 		return (ft_putchar('%'));
-	if (flag == 'u')
-		return (ft_unsigned(va_arg(args, unsigned int), DECIMAL_BASE));
 	return (0);
 }

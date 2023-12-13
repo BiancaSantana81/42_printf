@@ -6,7 +6,7 @@
 /*   By: bsantana <bsantana@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 15:36:26 by bsantana          #+#    #+#             */
-/*   Updated: 2023/12/13 15:27:17 by bsantana         ###   ########.fr       */
+/*   Updated: 2023/12/13 16:12:08 by bsantana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 int		ft_printf(const char *type_format, ...);
 int		ft_flags(char flag, va_list args);
 int		ft_putchar(char c);
+int		ft_strlen(char *str);
 int		ft_putstr(char *s);
 int		ft_putnbase(long long n, char *base);
 int		ft_unsigned(long long n, char *base);
-int		ft_strlen(char *str);
 int		ft_pointer(unsigned long long n, char *base);
 
 #endif
