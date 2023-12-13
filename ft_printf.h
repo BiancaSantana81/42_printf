@@ -6,7 +6,7 @@
 /*   By: bsantana <bsantana@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 15:36:26 by bsantana          #+#    #+#             */
-/*   Updated: 2023/12/13 16:12:08 by bsantana         ###   ########.fr       */
+/*   Updated: 2023/12/13 19:15:46 by bsantana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int		ft_putchar(char c);
 int		ft_strlen(char *str);
 int		ft_putstr(char *s);
 int		ft_putnbase(long long n, char *base);
-int		ft_unsigned(long long n, char *base);
 int		ft_pointer(unsigned long long n, char *base);
 
 #endif
