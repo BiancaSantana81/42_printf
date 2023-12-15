@@ -25,7 +25,6 @@ int		ft_putchar(char c);
 int		ft_strlen(char *str);
 int		ft_putstr(char *s);
 int		ft_putnbase(long long n, char *base);
-int		ft_unsigned(long long n, char *base);
 int		ft_pointer(unsigned long long n, char *base);
 
 #endif
