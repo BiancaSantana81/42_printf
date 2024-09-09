@@ -35,5 +35,5 @@ int ft_printf(const char *type_format, ...)
 	}
 	va_end(args);
 
-	return (result);
+	return result;
 }

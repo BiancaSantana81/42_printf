@@ -89,5 +89,5 @@ int ft_pointer(unsigned long long n, char *base)
 	}
 	result += ft_putchar(base[n % base_size]);
 
-	return (result);
+	return result;
 }

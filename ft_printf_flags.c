@@ -46,5 +46,5 @@ int ft_flags(char flag, va_list args)
 		return (ft_putnbase(va_arg(args, unsigned int), DECIMAL_BASE));
 	}
 
-	return (0);
+	return 0;
 }

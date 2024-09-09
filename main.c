@@ -55,5 +55,5 @@ int main(void)
 	ft_printf("Meu ponteiro: \n");
 	ft_printf("%p\n", "Você imprime em hexadecimal?");
 
-	return (0);
+	return 0;
 }
