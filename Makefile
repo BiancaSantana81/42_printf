@@ -13,9 +13,14 @@ $(NAME) : $(FILES_O)
 	cc -c $< -o $@ -Wall -Wextra -Werror
 
 clean:
-	rm -f $(FILES_O)
+	rm -f $(FILES_O) main.o
 	
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) main
 
 re: fclean all
+
+test: $(FILES_O)
+	@cc -c main.c -o main.o -Wall -Wextra -Werror
+	@cc -o main main.o ft_printf.o ft_printf_flags.o ft_printf_utils.o
+	./main
