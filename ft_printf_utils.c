@@ -17,6 +17,7 @@ int ft_putchar(char c)
 	int result;
 
 	result = write(1, &c, 1);
+
 	return (result);
 }
 
@@ -28,6 +29,7 @@ int ft_strlen(char *str)
 	while (str[i]) {
 		i++;
 	}
+
 	return (i);
 }
 
@@ -38,13 +40,16 @@ int ft_putstr(char *s)
 
 	i = 0;
 	result = 0;
+
 	if (s == NULL) {
 		return (write(1, "(null)", 6));
 	}
+
 	while (s && s[i] != 0) {
 		result += write(1, &s[i], 1);
 		i++;
 	}
+
 	return (result);
 }
 
@@ -63,6 +68,7 @@ int ft_putnbase(long long n, char *base)
 		result += ft_putnbase((n / base_size), base);
 	}
 	result += ft_putchar(base[n % base_size]);
+
 	return (result);
 }
 
@@ -82,5 +88,6 @@ int ft_pointer(unsigned long long n, char *base)
 		result += ft_putstr("0x");
 	}
 	result += ft_putchar(base[n % base_size]);
+
 	return (result);
 }

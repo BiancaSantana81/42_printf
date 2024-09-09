@@ -23,6 +23,7 @@ int ft_printf(const char *type_format, ...)
 	if (!type_format) {
 		return (-1);
 	}
+
 	va_start(args, type_format);
 	while (type_format[i]) {
 		if (type_format[i] == '%' && type_format[i + 1] != '\0') {
@@ -33,5 +34,6 @@ int ft_printf(const char *type_format, ...)
 		i++;
 	}
 	va_end(args);
+
 	return (result);
 }
