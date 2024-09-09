@@ -12,23 +12,31 @@
 
 #include "ft_printf.h"
 
-int	ft_flags(char flag, va_list args)
+int ft_flags(char flag, va_list args)
 {
-	if (flag == 'c')
+	if (flag == 'c') {
 		return (ft_putchar(va_arg(args, int)));
-	if (flag == 's')
+	}
+	if (flag == 's') {
 		return (ft_putstr(va_arg(args, char *)));
-	if (flag == 'p')
+	}
+	if (flag == 'p') {
 		return (ft_pointer(va_arg(args, unsigned long long), HEXA_LOWER_BASE));
-	if (flag == 'd' || flag == 'i')
+	}
+	if (flag == 'd' || flag == 'i') {
 		return (ft_putnbase(va_arg(args, int), DECIMAL_BASE));
-	if (flag == 'x')
+	}
+	if (flag == 'x') {
 		return (ft_putnbase(va_arg(args, unsigned int), HEXA_LOWER_BASE));
-	if (flag == 'X')
+	}
+	if (flag == 'X') {
 		return (ft_putnbase(va_arg(args, unsigned int), HEXA_UPPER_BASE));
-	if (flag == '%')
+	}
+	if (flag == '%') {
 		return (ft_putchar('%'));
-	if (flag == 'u')
+	}
+	if (flag == 'u') {
 		return (ft_putnbase(va_arg(args, unsigned int), DECIMAL_BASE));
+	}
 	return (0);
 }

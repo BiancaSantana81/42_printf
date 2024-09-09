@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-int	main(void)
+int main(void)
 {
 	ft_printf("Minha função: ");
 	ft_printf("%c\n", '0');
