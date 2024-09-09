@@ -14,36 +14,26 @@
 
 int ft_flags(char flag, va_list args)
 {
-	if (flag == 'c') {
-		return (ft_putchar(va_arg(args, int)));
-	}
-
-	if (flag == 's') {
-		return (ft_putstr(va_arg(args, char *)));
-	}
-
-	if (flag == 'p') {
-		return (ft_pointer(va_arg(args, unsigned long long), HEXA_LOWER_BASE));
-	}
-
-	if (flag == 'd' || flag == 'i') {
-		return (ft_putnbase(va_arg(args, int), DECIMAL_BASE));
-	}
-
-	if (flag == 'x') {
-		return (ft_putnbase(va_arg(args, unsigned int), HEXA_LOWER_BASE));
-	}
-
-	if (flag == 'X') {
-		return (ft_putnbase(va_arg(args, unsigned int), HEXA_UPPER_BASE));
-	}
-
-	if (flag == '%') {
-		return (ft_putchar('%'));
-	}
-
-	if (flag == 'u') {
-		return (ft_putnbase(va_arg(args, unsigned int), DECIMAL_BASE));
+	switch (flag) {
+	case 'c':
+		return ft_putchar(va_arg(args, int));
+	case 's':
+		return ft_putstr(va_arg(args, char *));
+	case 'p':
+		return ft_pointer(va_arg(args, unsigned long long), HEXA_LOWER_BASE);
+	case 'd':
+	case 'i':
+		return ft_putnbase(va_arg(args, int), DECIMAL_BASE);
+	case 'x':
+		return ft_putnbase(va_arg(args, unsigned int), HEXA_LOWER_BASE);
+	case 'X':
+		return ft_putnbase(va_arg(args, unsigned int), HEXA_UPPER_BASE);
+	case '%':
+		return ft_putchar('%');
+	case 'u':
+		return ft_putnbase(va_arg(args, unsigned int), DECIMAL_BASE);
+	default:
+		break;
 	}
 
 	return 0;
