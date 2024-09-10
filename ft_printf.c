@@ -14,24 +14,22 @@
 
 int ft_printf(const char *type_format, ...)
 {
-	va_list args;
-	int i;
 	int result;
+	va_list args;
 
-	i = 0;
 	result = 0;
-	if (!type_format) {
-		return (-1);
+	if (type_format == NULL) {
+		return -1;
 	}
 
 	va_start(args, type_format);
-	while (type_format[i]) {
+	for (int i = 0; type_format[i] != '\0'; ++i) {
 		if (type_format[i] == '%' && type_format[i + 1] != '\0') {
-			result += ft_flags(type_format[++i], args);
+			i += 1;
+			result += ft_flags(type_format[i], args);
 		} else {
 			result += ft_putchar(type_format[i]);
 		}
-		i++;
 	}
 	va_end(args);
 
