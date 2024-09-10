@@ -12,76 +12,76 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Número do FD do stdout
+ */
+#define STDOUT 1
+
 int ft_putchar(char c)
 {
 	int result;
 
-	result = write(1, &c, 1);
+	result = write(STDOUT, &c, 1);
 
-	return (result);
+	return result;
 }
 
 int ft_strlen(char *str)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (str[i]) {
-		i++;
+	for (; str[i] != '\0'; i++) {
 	}
 
-	return (i);
+	return i;
 }
 
 int ft_putstr(char *s)
 {
-	int i;
-	int result;
-
-	i = 0;
-	result = 0;
+	int result = 0;
 
 	if (s == NULL) {
-		return (write(1, "(null)", 6));
+		return write(STDOUT, "(null)", 6);
 	}
 
-	while (s && s[i] != 0) {
-		result += write(1, &s[i], 1);
-		i++;
+	for (int i = 0; s[i] != '\0'; i++) {
+		result += write(STDOUT, &s[i], 1);
 	}
 
-	return (result);
+	return result;
 }
 
 int ft_putnbase(long long n, char *base)
 {
-	int result;
+	int result = 0;
 	int base_size;
 
-	result = 0;
 	base_size = ft_strlen(base);
+
 	if (n < 0) {
 		result += ft_putchar('-');
-		n = n * -1;
+		n *= -1;
 	}
+
 	if (n >= base_size) {
 		result += ft_putnbase((n / base_size), base);
 	}
 	result += ft_putchar(base[n % base_size]);
 
-	return (result);
+	return result;
 }
 
 int ft_pointer(unsigned long long n, char *base)
 {
-	int result;
+	int result = 0;
 	unsigned long long base_size;
 
-	result = 0;
 	base_size = ft_strlen(base);
+
 	if (n == 0) {
-		return (write(1, "(nil)", 5));
+		return write(STDOUT, "(nil)", 5);
 	}
+
 	if (n >= base_size) {
 		result += ft_pointer((n / base_size), base);
 	} else {
