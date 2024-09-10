@@ -12,9 +12,8 @@
 
 #include "ft_printf.h"
 #include <stdio.h>
-#include <limits.h>
 
-int	main(void)
+int main(void)
 {
 	ft_printf("Minha função: ");
 	ft_printf("%c\n", '0');
@@ -56,5 +55,5 @@ int	main(void)
 	ft_printf("Meu ponteiro: \n");
 	ft_printf("%p\n", "Você imprime em hexadecimal?");
 
-	return (0);
+	return 0;
 }
